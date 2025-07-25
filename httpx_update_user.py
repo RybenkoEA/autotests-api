@@ -3,7 +3,7 @@ import httpx
 from get_random_email import get_random_email
 
 create_user_payload = {
-  "email": get_random_email(),
+  "email": fake.email(),
   "password": "string",
   "lastName": "string",
   "firstName": "string",
@@ -26,7 +26,7 @@ print(f'login_user_response {login_user_response.status_code}')
 print(login_user_response_data['token']['accessToken'])
 
 update_user_payload = {
-  "email": get_random_email(),
+  "email": fake.email(),
   "lastName": "string",
   "firstName": "string",
   "middleName": "string"
